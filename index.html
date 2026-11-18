@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Khwaja Yunus Ali University</h1>
+    <nav><a href="#form-section">Register</a> <a href="#result-section">Submitted Data</a></nav>
+  </header>
+
+  <main>
+    <section id="form-section">
+      <h2>Student Registration</h2>
+      <form id="regForm" novalidate>
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name">
+          <span class="error" id="nameErr"></span>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+          <span class="error" id="emailErr"></span>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+          <span class="error" id="phoneErr"></span>
+        </div>
+        <div class="field">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob">
+          <span class="error" id="dobErr"></span>
+        </div>
+        <div class="field">
+          <label for="dept">Department</label>
+          <select id="dept" name="dept">
+            <option value="">-- Select --</option>
+            <option>CSE</option><option>EEE</option><option>BBA</option><option>English</option>
+          </select>
+          <span class="error" id="deptErr"></span>
+        </div>
+        <fieldset class="field">
+          <legend>Gender</legend>
+          <label><input type="radio" name="gender" value="Male"> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+          <span class="error" id="genderErr"></span>
+        </fieldset>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password">
+          <span class="error" id="passwordErr"></span>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="result-section">
+      <h2>Submitted Data</h2>
+      <p id="successMsg" style="color:green; font-weight:bold;"></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th><th>Name</th><th>Email</th><th>Phone</th>
+              <th>DOB</th><th>Department</th><th>Gender</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr id="emptyRow"><td colspan="7">No data submitted yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2026 Web Engineering Lab, CSE</p></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
